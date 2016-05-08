@@ -10,7 +10,7 @@ def ai_id(s):
 
 
 def ai_url(s):
-    return s.startswith("/ai/")
+    return s.startswith("/ai/") and ai_id(s) is not None
 
 
 game_re = re.compile(r"^/([a-z0-9]{8})")
